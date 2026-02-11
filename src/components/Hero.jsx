@@ -43,12 +43,12 @@ const Hero = () => {
 			.to(".right-leaf", { y: 200 }, 0)
 			.to(".left-leaf", { y: -200 }, 0);
 
-		const startValue = isMobile ? "top 50%" : "center 40%"; // top of the video hits 50% of the viewport height on mobile, and center of the video hits 40% of the viewport height on desktop, the video(animation) will start playing
+		const startValue = isMobile ? "top 50%" : "center 60%"; // top of the video hits 50% of the viewport height on mobile, and center of the video hits 40% of the viewport height on desktop, the video(animation) will start playing
 		const endValue = isMobile ? "120% top" : "bottom top"; // 120% of the video hits the top of the viewport on mobile, and bottom of the video hits the top of the viewport on desktop, the video(animation) will end playing
 
 		const videoTimeline = gsap.timeline({
 			scrollTrigger: {
-				trigger: ".video",
+				trigger: "video",
 				start: startValue,
 				end: endValue,
 				scrub: true,
